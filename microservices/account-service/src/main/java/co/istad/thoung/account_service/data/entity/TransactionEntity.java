@@ -1,6 +1,7 @@
 package co.istad.thoung.account_service.data.entity;
 
-import co.istad.thoung.account_service.domain.valueobject.Money;
+
+import co.istad.thoung.common.domain.valueobject.Money;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Entity
 @Table(name = "tranctions")
-public class Transaction {
+public class TransactionEntity {
 
     @Id
     UUID transactionId;
@@ -21,6 +22,8 @@ public class Transaction {
     @ManyToOne()
     @JoinColumn(name = "account_id")
     private AccountEntity account;
+
+    private String remarks;
 
     @Embedded
     private Money money;

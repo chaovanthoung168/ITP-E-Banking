@@ -1,6 +1,6 @@
 package co.istad.thoung.customer_service.application.dto.create;
 
-import co.istad.thoung.common.valueobject.CustomerSegmentId;
+import co.istad.thoung.common.domain.valueobject.CustomerSegmentId;
 import co.istad.thoung.customer_service.domain.valueobject.*;
 import lombok.Builder;
 

@@ -1,17 +1,12 @@
 package co.istad.thoung.account_service.application.mapper;
 
-import co.istad.thoung.account_service.application.dto.CreateAccountRequest;
-import co.istad.thoung.account_service.application.dto.CreateAccountResponse;
+import co.istad.thoung.account_service.application.dto.create.CreateAccountRequest;
 import co.istad.thoung.account_service.data.entity.AccountEntity;
 import co.istad.thoung.account_service.domain.command.CreateAccountCommand;
 import co.istad.thoung.account_service.domain.event.AccountCreateEvent;
-import co.istad.thoung.common.valueobject.AccountId;
-import co.istad.thoung.common.valueobject.CustomerId;
+import co.istad.thoung.common.domain.valueobject.AccountId;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.springframework.stereotype.Component;
-
-import java.util.UUID;
 
 @Mapper(componentModel = "spring")
 public interface AccountMapper {

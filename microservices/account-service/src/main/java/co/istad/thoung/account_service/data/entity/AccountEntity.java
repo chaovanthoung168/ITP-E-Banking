@@ -1,8 +1,7 @@
 package co.istad.thoung.account_service.data.entity;
 
 import co.istad.thoung.account_service.domain.valueobject.AccountStatus;
-import co.istad.thoung.account_service.domain.valueobject.Currency;
-import co.istad.thoung.account_service.domain.valueobject.Money;
+import co.istad.thoung.common.domain.valueobject.Money;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

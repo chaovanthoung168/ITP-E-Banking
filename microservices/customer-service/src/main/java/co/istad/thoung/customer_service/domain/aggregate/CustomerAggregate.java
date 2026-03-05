@@ -1,7 +1,7 @@
 package co.istad.thoung.customer_service.domain.aggregate;
 
-import co.istad.thoung.common.valueobject.CustomerId;
-import co.istad.thoung.common.valueobject.CustomerSegmentId;
+import co.istad.thoung.common.domain.valueobject.CustomerId;
+import co.istad.thoung.common.domain.valueobject.CustomerSegmentId;
 import co.istad.thoung.customer_service.domain.command.ChangePhoneNumberCommand;
 import co.istad.thoung.customer_service.domain.command.CreateCustomerCommand;
 import co.istad.thoung.customer_service.domain.event.CustomerCreatedEvent;
@@ -37,7 +37,7 @@ public class CustomerAggregate {
     private Address address;
     private String phoneNumber;
     private Contact contact;
-    private CustomerSegmentId  customerSegmentId;
+    private CustomerSegmentId customerSegmentId;
 
 
     private List<String> failureMessages;

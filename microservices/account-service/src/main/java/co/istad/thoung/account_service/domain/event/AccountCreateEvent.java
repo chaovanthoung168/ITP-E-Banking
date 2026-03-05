@@ -1,10 +1,10 @@
 package co.istad.thoung.account_service.domain.event;
 
 import co.istad.thoung.account_service.domain.valueobject.AccountTypeCode;
-import co.istad.thoung.account_service.domain.valueobject.Money;
-import co.istad.thoung.common.valueobject.AccountId;
-import co.istad.thoung.common.valueobject.BranchId;
-import co.istad.thoung.common.valueobject.CustomerId;
+import co.istad.thoung.common.domain.valueobject.AccountId;
+import co.istad.thoung.common.domain.valueobject.BranchId;
+import co.istad.thoung.common.domain.valueobject.CustomerId;
+import co.istad.thoung.common.domain.valueobject.Money;
 import lombok.Builder;
 
 import java.time.ZonedDateTime;

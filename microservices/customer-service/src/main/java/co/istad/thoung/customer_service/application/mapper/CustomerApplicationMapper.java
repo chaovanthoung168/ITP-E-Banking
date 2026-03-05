@@ -1,6 +1,7 @@
 package co.istad.thoung.customer_service.application.mapper;
 
-import co.istad.thoung.common.valueobject.CustomerId;
+import co.istad.thoung.common.domain.valueobject.CustomerId;
+
 import co.istad.thoung.customer_service.application.dto.create.CreateCustomerRequest;
 import co.istad.thoung.customer_service.application.dto.query.CustomerResponse;
 import co.istad.thoung.customer_service.application.dto.update.ChangePhoneNumberRequest;

@@ -1,4 +1,4 @@
-package co.istad.thoung.common.valueobject;
+package co.istad.thoung.common.domain.valueobject;
 
 import lombok.Getter;
 

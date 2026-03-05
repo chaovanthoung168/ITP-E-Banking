@@ -1,10 +1,11 @@
-package co.istad.thoung.account_service.application.dto;
+package co.istad.thoung.account_service.application.dto.create;
 
 import co.istad.thoung.account_service.domain.valueobject.AccountTypeCode;
-import co.istad.thoung.account_service.domain.valueobject.Money;
-import co.istad.thoung.common.valueobject.AccountId;
-import co.istad.thoung.common.valueobject.BranchId;
-import co.istad.thoung.common.valueobject.CustomerId;
+
+import co.istad.thoung.common.domain.valueobject.BranchId;
+import co.istad.thoung.common.domain.valueobject.CustomerId;
+import co.istad.thoung.common.domain.valueobject.Money;
+
 
 public record CreateAccountRequest(
         String accountNumber,
