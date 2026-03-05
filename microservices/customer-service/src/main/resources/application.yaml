@@ -1,0 +1,34 @@
+axon:
+  axonserver:
+    enabled: false
+  serializer:
+    general: jackson
+    events: jackson
+    messages: jackson
+eureka:
+  instance:
+    instance-id: ${spring.application.name}
+    prefer-ip-address: true
+server:
+  port: 20261
+spring:
+  application:
+    name: customer
+  datasource:
+    username: itpusr
+    password: itp@168
+    url: jdbc:postgresql://localhost:16851/db_customer
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  profiles:
+    active: dev
+  config:
+    import: optional:configserver:http//localhost:8888
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9090
