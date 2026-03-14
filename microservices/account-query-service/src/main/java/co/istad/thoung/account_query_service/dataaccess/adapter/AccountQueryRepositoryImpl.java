@@ -1,7 +1,7 @@
 package co.istad.thoung.account_query_service.dataaccess.adapter;
 
 import co.istad.thoung.account_query_service.applicationservice.ports.output.repository.AccountQueryRepository;
-import co.istad.thoung.account_query_service.dataaccess.enity.AccountEntity;
+import co.istad.thoung.account_query_service.dataaccess.entity.AccountEntity;
 import co.istad.thoung.account_query_service.dataaccess.mapper.AccountDataAccessMapper;
 import co.istad.thoung.account_query_service.dataaccess.repository.AccountQueryReactiveRepository;
 import co.istad.thoung.account_query_service.domain.Entity.Account;

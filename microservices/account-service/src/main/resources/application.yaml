@@ -51,6 +51,11 @@ spring:
     hibernate:
       ddl-auto: update
 
+  r2dbc:
+    url: r2dbc:postgresql://localhost:16851/db_account
+    username: itpusr
+    password: itp@168
+
   security:
     oauth2:
       resourceserver:

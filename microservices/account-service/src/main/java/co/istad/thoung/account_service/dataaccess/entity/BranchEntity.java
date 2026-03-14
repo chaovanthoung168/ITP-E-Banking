@@ -1,4 +1,4 @@
-package co.istad.thoung.account_service.data.entity;
+package co.istad.thoung.account_service.dataaccess.entity;
 
 
 import jakarta.persistence.Entity;

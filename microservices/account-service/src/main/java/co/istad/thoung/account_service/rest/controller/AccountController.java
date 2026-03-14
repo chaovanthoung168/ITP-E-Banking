@@ -9,7 +9,7 @@ import co.istad.thoung.account_service.application.dto.deposit.DepositMoneyReque
 import co.istad.thoung.account_service.application.dto.deposit.DepositMoneyResponse;
 import co.istad.thoung.account_service.application.dto.withdraw.WithdrawMoneyRequest;
 import co.istad.thoung.account_service.application.dto.withdraw.WithdrawMoneyResponse;
-import co.istad.thoung.account_service.application.service.AccountService;
+import co.istad.thoung.account_service.application.ports.input.service.AccountService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

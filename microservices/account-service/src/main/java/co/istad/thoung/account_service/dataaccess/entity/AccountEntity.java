@@ -1,4 +1,4 @@
-package co.istad.thoung.account_service.data.entity;
+package co.istad.thoung.account_service.dataaccess.entity;
 
 import co.istad.thoung.common.domain.valueobject.AccountStatus;
 import co.istad.thoung.common.domain.valueobject.Money;
@@ -43,5 +43,4 @@ public class AccountEntity {
     @ManyToOne()
     @JoinColumn(name = "account_type_id")
     private AccountTypeCodeEntity accountType;
-
 }

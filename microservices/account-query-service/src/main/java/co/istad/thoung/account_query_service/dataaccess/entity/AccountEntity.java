@@ -1,4 +1,4 @@
-package co.istad.thoung.account_query_service.dataaccess.enity;
+package co.istad.thoung.account_query_service.dataaccess.entity;
 
 
 import co.istad.thoung.common.domain.valueobject.Currency;

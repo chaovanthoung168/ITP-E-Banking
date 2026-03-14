@@ -1,7 +1,6 @@
-package co.istad.thoung.account_service.data.entity;
+package co.istad.thoung.account_service.dataaccess.entity;
 
 import co.istad.thoung.common.domain.valueobject.AccountTypeCode;
-import co.istad.thoung.common.domain.valueobject.AccountTypeId;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

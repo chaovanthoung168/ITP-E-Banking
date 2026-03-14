@@ -1,6 +1,6 @@
 package co.istad.thoung.account_query_service.dataaccess.mapper;
 
-import co.istad.thoung.account_query_service.dataaccess.enity.AccountEntity;
+import co.istad.thoung.account_query_service.dataaccess.entity.AccountEntity;
 import co.istad.thoung.account_query_service.domain.Entity.Account;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

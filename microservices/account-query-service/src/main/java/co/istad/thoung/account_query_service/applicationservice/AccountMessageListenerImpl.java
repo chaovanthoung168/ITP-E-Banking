@@ -3,7 +3,6 @@ package co.istad.thoung.account_query_service.applicationservice;
 import co.istad.thoung.account_query_service.applicationservice.mapper.AccountAppDataMapper;
 import co.istad.thoung.account_query_service.applicationservice.ports.input.message.listener.AccountMessageListener;
 import co.istad.thoung.account_query_service.applicationservice.ports.output.repository.AccountQueryRepository;
-import co.istad.thoung.account_query_service.dataaccess.mapper.AccountDataAccessMapper;
 import co.istad.thoung.account_query_service.domain.Entity.Account;
 import co.istad.thoung.common.domain.event.AccountCreateEvent;
 import lombok.RequiredArgsConstructor;

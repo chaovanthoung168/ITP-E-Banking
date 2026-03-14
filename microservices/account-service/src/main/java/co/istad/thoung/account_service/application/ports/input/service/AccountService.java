@@ -1,4 +1,4 @@
-package co.istad.thoung.account_service.application.service;
+package co.istad.thoung.account_service.application.ports.input.service;
 
 import co.istad.thoung.account_service.application.dto.FreezeAccount.FreezeAccountRequest;
 import co.istad.thoung.account_service.application.dto.FreezeAccount.FreezeAccountResponse;

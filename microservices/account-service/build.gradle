@@ -31,6 +31,10 @@ ext {
 
 dependencies {
 
+	// R2DBC
+//	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
+//	runtimeOnly 'org.postgresql:r2dbc-postgresql'
+
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 
 	compileOnly 'org.mapstruct:mapstruct:1.5.5.Final'

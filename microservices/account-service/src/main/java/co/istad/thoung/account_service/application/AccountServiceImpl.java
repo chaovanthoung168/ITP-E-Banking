@@ -1,4 +1,4 @@
-package co.istad.thoung.account_service.application.service.impl;
+package co.istad.thoung.account_service.application;
 
 import co.istad.thoung.account_service.application.dto.FreezeAccount.FreezeAccountRequest;
 import co.istad.thoung.account_service.application.dto.FreezeAccount.FreezeAccountResponse;
@@ -8,15 +8,19 @@ import co.istad.thoung.account_service.application.dto.deposit.DepositMoneyReque
 import co.istad.thoung.account_service.application.dto.deposit.DepositMoneyResponse;
 import co.istad.thoung.account_service.application.dto.withdraw.WithdrawMoneyRequest;
 import co.istad.thoung.account_service.application.dto.withdraw.WithdrawMoneyResponse;
-import co.istad.thoung.account_service.application.mapper.AccountMapper;
-import co.istad.thoung.account_service.application.repository.AccountRepository;
-import co.istad.thoung.account_service.application.service.AccountService;
-import co.istad.thoung.account_service.data.entity.AccountEntity;
+import co.istad.thoung.account_service.application.mapper.AccountAppDataMapper;
+//import co.istad.thoung.account_service.application.repository.AccountRepository;
+import co.istad.thoung.account_service.application.ports.input.service.AccountService;
+import co.istad.thoung.account_service.application.ports.output.repostitory.AccountRepository;
+import co.istad.thoung.account_service.application.ports.output.repostitory.AccountTypeCodeRepository;
+import co.istad.thoung.account_service.dataaccess.entity.AccountEntity;
+import co.istad.thoung.account_service.domain.aggregate.AccountAggregate;
 import co.istad.thoung.account_service.domain.command.CreateAccountCommand;
 
 import co.istad.thoung.account_service.domain.command.DepositMoneyCommand;
 import co.istad.thoung.account_service.domain.command.FreezeAccountCommand;
 import co.istad.thoung.account_service.domain.command.WithdrawMoneyCommand;
+import co.istad.thoung.account_service.domain.entity.Account;
 import co.istad.thoung.common.domain.valueobject.AccountStatus;
 import co.istad.thoung.common.domain.valueobject.AccountId;
 import co.istad.thoung.common.domain.valueobject.Currency;
@@ -28,6 +32,7 @@ import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
+import reactor.core.publisher.Mono;
 
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
@@ -39,13 +44,14 @@ import java.util.UUID;
 public class AccountServiceImpl implements AccountService {
 
     private final CommandGateway commandGateway;
-    private final AccountMapper accountMapper;
+    private final AccountAppDataMapper accountAppDataMapper;
     private final AccountRepository accountRepository;
+
 
     @Override
     public CreateAccountResponse createAccount(CreateAccountRequest createAccountRequest) {
 
-        CreateAccountCommand createAccountCommand = accountMapper
+        CreateAccountCommand createAccountCommand = accountAppDataMapper
                 .CreateAccountRequestToCreateAccountCommand(new AccountId(UUID.randomUUID()), createAccountRequest);
         log.info("CreateAccountCommand: {}", createAccountCommand);
 
@@ -111,10 +117,11 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public FreezeAccountResponse freezeAccount(UUID accountId, FreezeAccountRequest freezeAccountRequest) {
 
-        AccountEntity accountEntity = accountRepository.findById(accountId)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Account not found"));
+        Account account = accountRepository.findById(accountId)  // ✅ Account not AccountEntity
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.NOT_FOUND, "Account not found"));
 
-        AccountStatus previousStatus = accountEntity.getStatus();
+        AccountStatus previousStatus = account.getStatus();  // ✅ getStatus() from Account
 
         FreezeAccountCommand command = FreezeAccountCommand.builder()
                 .accountId(new AccountId(accountId))
