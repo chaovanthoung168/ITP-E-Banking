@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/microservices/account-query-service/src/main/resources/db/changelog/ddl/12-02-changelog.sql" value="4a6da50a-ebe3-4b42-a4c7-0a21c2cf117d" />
+  </component>
+</project>

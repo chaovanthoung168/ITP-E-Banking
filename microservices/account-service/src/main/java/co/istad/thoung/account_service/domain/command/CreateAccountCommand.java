@@ -1,10 +1,6 @@
 package co.istad.thoung.account_service.domain.command;
 
-import co.istad.thoung.account_service.domain.valueobject.AccountTypeCode;
-import co.istad.thoung.common.domain.valueobject.AccountId;
-import co.istad.thoung.common.domain.valueobject.BranchId;
-import co.istad.thoung.common.domain.valueobject.CustomerId;
-import co.istad.thoung.common.domain.valueobject.Money;
+import co.istad.thoung.common.domain.valueobject.*;
 import lombok.Builder;
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
 
@@ -15,9 +11,10 @@ public record CreateAccountCommand(
         String accountNumber,
         String accountHolder,
         CustomerId customerId,
-        AccountTypeCode accountTypeCode,
+//        AccountTypeId accountTypeId,
         BranchId branchId,
-        Money initialBalance
+        Money initialBalance,
+        AccountTypeCode accountTypeCode
 ) {
 
 }

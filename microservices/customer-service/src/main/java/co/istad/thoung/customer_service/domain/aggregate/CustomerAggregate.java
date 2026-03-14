@@ -28,7 +28,6 @@ public class CustomerAggregate {
 
     @AggregateIdentifier
     private CustomerId customerId;
-
     private CustomerName name;
     private CustomerGender gender;
     private CustomerEmail email;

@@ -1,6 +1,7 @@
 package co.istad.thoung.account_service.data.entity;
 
-import co.istad.thoung.account_service.domain.valueobject.AccountTypeCode;
+import co.istad.thoung.common.domain.valueobject.AccountTypeCode;
+import co.istad.thoung.common.domain.valueobject.AccountTypeId;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,10 +17,10 @@ import java.util.UUID;
 public class AccountTypeCodeEntity {
 
     @Id
-    UUID accountTypeCodeId;
+    private UUID accountTypeCodeId;
 
     @Enumerated(EnumType.STRING)
-    AccountTypeCode accountTypeCode;
+    private AccountTypeCode accountTypeCode;
 
 
 

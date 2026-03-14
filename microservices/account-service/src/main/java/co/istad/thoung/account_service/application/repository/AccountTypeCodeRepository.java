@@ -1,7 +1,8 @@
 package co.istad.thoung.account_service.application.repository;
 
 import co.istad.thoung.account_service.data.entity.AccountTypeCodeEntity;
-import co.istad.thoung.account_service.domain.valueobject.AccountTypeCode;
+import co.istad.thoung.common.domain.valueobject.AccountTypeCode;
+import co.istad.thoung.common.domain.valueobject.AccountTypeId;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

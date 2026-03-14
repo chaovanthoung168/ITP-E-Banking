@@ -7,11 +7,11 @@ import co.istad.thoung.account_service.application.repository.TransactionReposit
 import co.istad.thoung.account_service.data.entity.AccountEntity;
 import co.istad.thoung.account_service.data.entity.AccountTypeCodeEntity;
 import co.istad.thoung.account_service.data.entity.TransactionEntity;
-import co.istad.thoung.account_service.domain.event.AccountCreateEvent;
+import co.istad.thoung.common.domain.event.AccountCreateEvent;
 import co.istad.thoung.account_service.domain.event.AccountFrozenEvent;
 import co.istad.thoung.account_service.domain.event.MoneyDepositedEvent;
 import co.istad.thoung.account_service.domain.event.MoneyWithdrawEvent;
-import co.istad.thoung.account_service.domain.valueobject.AccountStatus;
+import co.istad.thoung.common.domain.valueobject.AccountStatus;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.eventhandling.EventHandler;

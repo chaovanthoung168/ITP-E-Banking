@@ -10,7 +10,6 @@ import co.istad.thoung.account_service.application.dto.withdraw.WithdrawMoneyReq
 import co.istad.thoung.account_service.application.dto.withdraw.WithdrawMoneyResponse;
 import co.istad.thoung.account_service.application.mapper.AccountMapper;
 import co.istad.thoung.account_service.application.repository.AccountRepository;
-import co.istad.thoung.account_service.application.repository.AccountTypeCodeRepository;
 import co.istad.thoung.account_service.application.service.AccountService;
 import co.istad.thoung.account_service.data.entity.AccountEntity;
 import co.istad.thoung.account_service.domain.command.CreateAccountCommand;
@@ -18,7 +17,7 @@ import co.istad.thoung.account_service.domain.command.CreateAccountCommand;
 import co.istad.thoung.account_service.domain.command.DepositMoneyCommand;
 import co.istad.thoung.account_service.domain.command.FreezeAccountCommand;
 import co.istad.thoung.account_service.domain.command.WithdrawMoneyCommand;
-import co.istad.thoung.account_service.domain.valueobject.AccountStatus;
+import co.istad.thoung.common.domain.valueobject.AccountStatus;
 import co.istad.thoung.common.domain.valueobject.AccountId;
 import co.istad.thoung.common.domain.valueobject.Currency;
 import co.istad.thoung.common.domain.valueobject.Money;
